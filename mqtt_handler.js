@@ -1,3 +1,5 @@
+"use strict";
+
 const mqtt = require('mqtt');
 
 class MqttHandler {

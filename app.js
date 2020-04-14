@@ -5,7 +5,7 @@ var mqttHandler = require('./mqtt_handler');
 var path = require('path');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }));
 
 var mqttClient = new mqttHandler();
 mqttClient.connect();
