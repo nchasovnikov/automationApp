@@ -20,6 +20,104 @@ a.button:active{
   background-color:#999999;
 }
 
+:root {
+  --hue: 110;
+  --sat: 50%;
+  --light: 50%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #121212;
+}
+
+.demo-area {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /** The magic happens here **/
+  background: hsl(var(--hue), var(--sat), var(--light));
+}
+
+.demo-area h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: "PT Sans", sans-serif;
+  opacity: 0.75;
+}
+
+.white-text {
+  color: white;
+  transition: 0.25s color;
+}
+
+.black-text {
+  color: black;
+  transition: 0.25s color;
+}
+
+.control-area {
+  height: 20%;
+  width: 98%;
+  background: #121212;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.control-area .item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.control-area .item label {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.3;
+}
+
+.control-area .item input {
+  min-width: 200px;
+  /*position: relative;*/
+  left: 20px;
+  margin-left: 10px;
+}
+
+.control-area label {
+  color: #fff;
+}
+
+@media only screen and (max-width: 700px) {
+  .demo-area {
+    height: 70%;
+  }
+
+  .demo-area h2 {
+    font-size: 1.5rem;
+  }
+
+  .control-area {
+    height: 30%;
+    width: 98%;
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /*
 @media all and (max-width:30em){
   a.button{

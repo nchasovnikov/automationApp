@@ -1,11 +1,35 @@
 <html>
 <head>
   <title>Home automation</title>
-  <link href="style.css" rel='stylesheet'>
+  <link href="style.css" type="text/css" rel='stylesheet'>
   <script src="script.js"></script>
 </head>
 <body>
   <a class="button" onclick="light_on()">Lights ON</a>
   <a class="button" onclick="light_off()">Lights OFF</a>
+
+  <div class="container">
+
+  <div class="demo-area">
+    <h2 id="hsl-value">HSL (110, 50%, 50%)</h2>
+  </div>
+
+  <div class="control-area">
+    <div class="item">
+      <label for="hue">Hue</label>
+      <input type="range" id="hue" name="hue" min="0" max="360" value="110">
+    </div>
+    <div class="item">
+      <label for="sat">Saturation</label>
+      <input type="range" id="sat" name="sat" min="0" max="100" value="50" data-unit="%">
+    </div>
+    <div class="item">
+      <label for="light">Light</label>
+      <input type="range" id="light" name="light" min="0" max="100" value="50" data-unit="%">
+    </div>
+  </div>
+  <a class="button" onclick="change_color()">Change color</a>
+
+</div>
 </body>
 </html>
